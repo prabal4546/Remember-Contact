@@ -12,7 +12,7 @@
 		9151DE5D25C52746004D8659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9151DE5C25C52746004D8659 /* Assets.xcassets */; };
 		9151DE6025C52746004D8659 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9151DE5F25C52746004D8659 /* Preview Assets.xcassets */; };
 		9151DE6925C528DF004D8659 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151DE6825C528DF004D8659 /* ImagePicker.swift */; };
-		9151DE6C25C53EBA004D8659 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151DE6B25C53EBA004D8659 /* DetailView.swift */; };
+		9151DE6C25C53EBA004D8659 /* AddPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151DE6B25C53EBA004D8659 /* AddPerson.swift */; };
 		916D5C2E25C5561600AE8DCA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D5C2D25C5561600AE8DCA /* Person.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		9151DE5F25C52746004D8659 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9151DE6125C52746004D8659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9151DE6825C528DF004D8659 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		9151DE6B25C53EBA004D8659 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		9151DE6B25C53EBA004D8659 /* AddPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPerson.swift; sourceTree = "<group>"; };
 		916D5C2D25C5561600AE8DCA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9151DE5A25C52740004D8659 /* ContentView.swift */,
-				9151DE6B25C53EBA004D8659 /* DetailView.swift */,
+				9151DE6B25C53EBA004D8659 /* AddPerson.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 			files = (
 				916D5C2E25C5561600AE8DCA /* Person.swift in Sources */,
 				9151DE6925C528DF004D8659 /* ImagePicker.swift in Sources */,
-				9151DE6C25C53EBA004D8659 /* DetailView.swift in Sources */,
+				9151DE6C25C53EBA004D8659 /* AddPerson.swift in Sources */,
 				9151DE5B25C52740004D8659 /* ContentView.swift in Sources */,
 				9151DE5925C52740004D8659 /* Contact_HelpApp.swift in Sources */,
 			);

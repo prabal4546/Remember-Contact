@@ -9,5 +9,10 @@ import Foundation
 import SwiftUI
 
 struct Person:Codable,Comparable {
-    <#fields#>
+    var name:String
+    var email:String
+    var imageData:Data
+    static func < (lhs:Person, rhs:Person)->Bool{
+           lhs.name < rhs.name
+       }
 }
