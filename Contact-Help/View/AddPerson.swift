@@ -13,7 +13,8 @@ struct AddPerson: View {
     @State private var inputImage: UIImage?
     @State private var name:String
     @State private var email:String
-    @Binding var persons: [Person]
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var persons : [Person]
     var body: some View {
         GeometryReader{geometry in
             NavigationView{
@@ -36,11 +37,22 @@ struct AddPerson: View {
                             .resizable()
                             .scaledToFit()
                             .clipShape(Circle())
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                         
-                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                    }
                 }
             }
             .navigationBarTitle("Add New Contact")
+            .navigationBarItems(trailing: Button("Save"){
+                if let jpegData = inputImage?.jpegData(compressionQuality: 0.8){
+                    let newPerson = Person(name: self.name, email: self.email, imageData: jpegData)
+                    self.persons.append(newPerson)
+                }
+                self.presentationMode.wrappedValue.dismiss()
+                self.saveData()
+            })
+            
+            
         }
     }
     func getDocumentsDirectory()->URL{
@@ -65,7 +77,9 @@ struct AddPerson: View {
 }
 
 struct AddPerson_Previews: PreviewProvider {
+    @State static var personas = [Person(name: "heino", email: "abc", imageData: (UIImage(systemName: "plus")?.jpegData(compressionQuality: 0.1))!)]
+
     static var previews: some View {
-        AddPerson( name: <#String#>, email: <#String#>)
+        AddPerson(persons: $personas)
     }
 }
