@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingImagePicker = false
+    @State private var image:Image?
     var body: some View {
-        Button("Import Picture"){
-            
-}
-            .padding()
+        NavigationView{
+            VStack{
+                image?
+                    .resizable()
+                    .scaledToFit()
+                        
+                Button("Import Picture"){
+                    self.showingImagePicker = true
+                }
+            }
+            .sheet(isPresented:$showingImagePicker){
+                ImagePicker( image: <#Binding<UIImage?>#>)
+            }
+        }
     }
 }
 
