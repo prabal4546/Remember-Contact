@@ -15,4 +15,8 @@ struct Person:Codable,Comparable {
     static func < (lhs:Person, rhs:Person)->Bool{
            lhs.name < rhs.name
        }
+    
+    func loadImageData(data: Data) -> UIImage {
+        return UIImage(data: data)!
+    }
 }

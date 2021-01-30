@@ -15,6 +15,7 @@ struct AddPerson: View {
     @State private var email:String
     @Environment(\.presentationMode) var presentationMode
     @Binding var persons : [Person]
+
     var body: some View {
         GeometryReader{geometry in
             NavigationView{
@@ -77,7 +78,8 @@ struct AddPerson: View {
 }
 
 struct AddPerson_Previews: PreviewProvider {
-    @State static var personas = [Person(name: "heino", email: "abc", imageData: (UIImage(systemName: "plus")?.jpegData(compressionQuality: 0.1))!)]
+
+    @State static var personas = [Person(name: "", email: "", imageData: (UIImage(systemName: "plus")?.jpegData(compressionQuality: 0.1))!)]
 
     static var previews: some View {
         AddPerson(persons: $personas)
