@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var image:Image?
     @State private var inputImage: UIImage?
 //    @State private var imageDescription:String
+    @State private var persons: [Person] = ContactSaver.decodeContacts()
+
     var body: some View {
         NavigationView{
             VStack{
@@ -31,6 +33,8 @@ struct ContentView: View {
             {
                 Image(systemName: "person.crop.circle.badge.plus")
                     
+            }.sheet(isPresented:$showingAddPersonScreen){
+                AddPerson()
             }
          )
 //            .sheet(isPresented:$showingImagePicker,onDismiss: loadImage){
