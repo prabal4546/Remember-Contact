@@ -17,16 +17,20 @@ struct AddPerson: View {
 //    @Binding var persons : [Person]
     @State private var persons: [Person] = ContactSaver.decodeContacts()
     var body: some View {
+        NavigationView{
         GeometryReader{geometry in
-            NavigationView{
+            
                 Form{
+                    Section(){
                     TextField("Name", text: $name)
                     TextField("Email", text: $email)
                         .keyboardType(.emailAddress)
+                    }
                 }
-                Section{
-                    Button(action:{self.showingImagePicker = true}){
-                        HStack{
+         
+                Section(){
+                    HStack{
+                        Button(action:{self.showingImagePicker = true}){
                         Image(systemName: "camera")
                         Text("Add a photo")
                     }}
@@ -43,15 +47,16 @@ struct AddPerson: View {
                         
                     }
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                
             }
             .navigationBarTitle("Add New Contact")
-         .navigationBarItems(trailing: Button("Save"){
-            let contactSaver = ContactSaver()
-            contactSaver.saveContact(image: inputImage!, firstName: name, email: email)
-            persons = ContactSaver.decodeContacts()
-             self.presentationMode.wrappedValue.dismiss()
-             self.saveData()
-         })
+            .navigationBarItems(trailing: Button("Save"){
+               let contactSaver = ContactSaver()
+               contactSaver.saveContact(image: inputImage!, firstName: name, email: email)
+               persons = ContactSaver.decodeContacts()
+                self.presentationMode.wrappedValue.dismiss()
+                self.saveData()
+            })
        
             
             
