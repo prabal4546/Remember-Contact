@@ -8,10 +8,10 @@
 import UIKit
 class ContactSaver: NSObject {
     
-    func saveContact(image: UIImage, firstName: String, email: String, imageData:Data) {
-        let contact = Person(name: firstName, email: email, imageData: imageData)
-        writeToJSON(contact)
-        saveImage(image: image, name: firstName)
+    func saveContact(image: UIImage, firstName: String, email: String) {
+        let person = Person(name: firstName, email: email, id: UUID())
+        writeToJSON(person)
+        saveImage(image: image, id: person.id)
     }
     
     func writeToJSON (_ contact: Person) {
@@ -33,9 +33,9 @@ class ContactSaver: NSObject {
         }
     }
     
-    func saveImage (image: UIImage, name: String) {
+    func saveImage (image: UIImage, id: UUID) {
         
-        let imageUrl = Self.getDocumentsDirectory().appendingPathComponent("\(name).jpeg")
+        let imageUrl = Self.getDocumentsDirectory().appendingPathComponent("\(id).jpeg")
         
         // save image
         do {

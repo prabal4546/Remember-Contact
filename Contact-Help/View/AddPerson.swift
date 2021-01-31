@@ -24,7 +24,7 @@ struct AddPerson: View {
                     TextField("Email", text: $email)
                         .keyboardType(.emailAddress)
                 }
-                Section(){
+                Section{
                     Button(action:{self.showingImagePicker = true}){
                         HStack{
                         Image(systemName: "camera")
@@ -46,10 +46,9 @@ struct AddPerson: View {
             }
             .navigationBarTitle("Add New Contact")
          .navigationBarItems(trailing: Button("Save"){
-             if let jpegData = inputImage?.jpegData(compressionQuality: 0.8){
-                 let newPerson = Person(name: self.name, email: self.email, imageData: jpegData)
-                 self.persons.append(newPerson)
-             }
+            let contactSaver = ContactSaver()
+            contactSaver.saveContact(image: inputImage!, firstName: name, email: email)
+            persons = ContactSaver.decodeContacts()
              self.presentationMode.wrappedValue.dismiss()
              self.saveData()
          })

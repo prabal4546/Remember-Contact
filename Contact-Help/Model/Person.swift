@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct Person:Codable,Comparable {
+struct Person:Codable,Comparable,Identifiable {
     var name:String
     var email:String
-    var imageData:Data
+    var id:UUID
     static func < (lhs:Person, rhs:Person)->Bool{
            lhs.name < rhs.name
        }

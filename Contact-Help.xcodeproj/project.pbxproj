@@ -15,6 +15,7 @@
 		9151DE6C25C53EBA004D8659 /* AddPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151DE6B25C53EBA004D8659 /* AddPerson.swift */; };
 		916D5C2E25C5561600AE8DCA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D5C2D25C5561600AE8DCA /* Person.swift */; };
 		91B5B84425C59B5D006DEDD0 /* ContactSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5B84325C59B5D006DEDD0 /* ContactSaver.swift */; };
+		91B5B84C25C68C6F006DEDD0 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5B84B25C68C6E006DEDD0 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9151DE6B25C53EBA004D8659 /* AddPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPerson.swift; sourceTree = "<group>"; };
 		916D5C2D25C5561600AE8DCA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		91B5B84325C59B5D006DEDD0 /* ContactSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSaver.swift; sourceTree = "<group>"; };
+		91B5B84B25C68C6E006DEDD0 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				9151DE6825C528DF004D8659 /* ImagePicker.swift */,
 				916D5C2D25C5561600AE8DCA /* Person.swift */,
 				91B5B84325C59B5D006DEDD0 /* ContactSaver.swift */,
+				91B5B84B25C68C6E006DEDD0 /* ImageSaver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				916D5C2E25C5561600AE8DCA /* Person.swift in Sources */,
 				9151DE6925C528DF004D8659 /* ImagePicker.swift in Sources */,
 				91B5B84425C59B5D006DEDD0 /* ContactSaver.swift in Sources */,
+				91B5B84C25C68C6F006DEDD0 /* ImageSaver.swift in Sources */,
 				9151DE6C25C53EBA004D8659 /* AddPerson.swift in Sources */,
 				9151DE5B25C52740004D8659 /* ContentView.swift in Sources */,
 				9151DE5925C52740004D8659 /* Contact_HelpApp.swift in Sources */,
