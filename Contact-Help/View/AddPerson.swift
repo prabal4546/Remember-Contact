@@ -55,7 +55,7 @@ struct AddPerson: View {
                contactSaver.saveContact(image: inputImage!, firstName: name, email: email)
                persons = ContactSaver.decodeContacts()
                 self.presentationMode.wrappedValue.dismiss()
-                self.saveData()
+//                self.saveData()
             })
        
             
@@ -75,15 +75,15 @@ struct AddPerson: View {
         
         UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
     }
-    func saveData() {
-          do {
-              let filename = getDocumentsDirectory().appendingPathComponent("persons")
-              let data = try JSONEncoder().encode(self.persons)
-              try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
-          } catch {
-              print("unable to save data")
-          }
-      }
+//    func saveData() {
+//          do {
+//              let filename = getDocumentsDirectory().appendingPathComponent("persons")
+//              let data = try JSONEncoder().encode(self.persons)
+//              try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
+//          } catch {
+//              print("unable to save data")
+//          }
+//      }
 }
 
 struct AddPerson_Previews: PreviewProvider {

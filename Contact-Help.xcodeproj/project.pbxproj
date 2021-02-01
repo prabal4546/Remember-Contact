@@ -16,6 +16,7 @@
 		916D5C2E25C5561600AE8DCA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D5C2D25C5561600AE8DCA /* Person.swift */; };
 		91B5B84425C59B5D006DEDD0 /* ContactSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5B84325C59B5D006DEDD0 /* ContactSaver.swift */; };
 		91B5B84C25C68C6F006DEDD0 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5B84B25C68C6E006DEDD0 /* ImageSaver.swift */; };
+		91B5B84F25C83324006DEDD0 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5B84E25C83324006DEDD0 /* LocationFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		916D5C2D25C5561600AE8DCA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		91B5B84325C59B5D006DEDD0 /* ContactSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSaver.swift; sourceTree = "<group>"; };
 		91B5B84B25C68C6E006DEDD0 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		91B5B84E25C83324006DEDD0 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				916D5C2D25C5561600AE8DCA /* Person.swift */,
 				91B5B84325C59B5D006DEDD0 /* ContactSaver.swift */,
 				91B5B84B25C68C6E006DEDD0 /* ImageSaver.swift */,
+				91B5B84E25C83324006DEDD0 /* LocationFetcher.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				916D5C2E25C5561600AE8DCA /* Person.swift in Sources */,
 				9151DE6925C528DF004D8659 /* ImagePicker.swift in Sources */,
+				91B5B84F25C83324006DEDD0 /* LocationFetcher.swift in Sources */,
 				91B5B84425C59B5D006DEDD0 /* ContactSaver.swift in Sources */,
 				91B5B84C25C68C6F006DEDD0 /* ImageSaver.swift in Sources */,
 				9151DE6C25C53EBA004D8659 /* AddPerson.swift in Sources */,
