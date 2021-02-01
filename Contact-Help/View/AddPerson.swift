@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddPerson: View {
+    let locationFetcher = LocationFetcher()
     @State private var showingImagePicker = false
     @State private var image:Image?
     @State private var inputImage: UIImage?
@@ -43,10 +44,26 @@ struct AddPerson: View {
                             .scaledToFit()
                             .frame(width: geometry.size.width * 0.3)
                             .clipShape(Circle())
-                            
-                        
                     }
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+            //in progress, integrate the map pin feature
+            Section(){
+                VStack {
+                    Button("Start Tracking Location") {
+                        self.locationFetcher.start()
+                    }
+
+                    Button("Read Location") {
+                        if let location = self.locationFetcher.lastKnownLocation {
+                            print("Your location is \(location)")
+                        } else {
+                            print("Your location is unknown")
+                        }
+                    }
+                }
+            }
+
+            
                 
             }
             .navigationBarTitle("Add New Contact")

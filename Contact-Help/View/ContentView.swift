@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+
     @State private var showingAddPersonScreen = false
     @State private var image:Image?
     @State private var inputImage: UIImage?
